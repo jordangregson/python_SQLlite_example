@@ -8,15 +8,15 @@ from employee import Employee
 # conn = sqlite3.connect(':memory:')
 
 # Create a database file
-conn = sqlite3.connect(':memory:')
+conn = sqlite3.connect('employee.db')
 
 c = conn.cursor()
 
-c.execute("""CREATE TABLE employees (
-            first text,
-            last text,
-            pay integer
-            )""")
+# c.execute("""CREATE TABLE employees (
+#             first text,
+#             last text,
+#             pay integer
+#             )""")
 
 def insert_emp(emp):
     with conn:
